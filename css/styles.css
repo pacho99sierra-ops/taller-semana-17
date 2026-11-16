@@ -33,13 +33,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2.5rem;
+  padding: 1.25rem clamp(1rem, 4vw, 2.5rem);
   background-color: var(--vino-oscuro);
   border-bottom: 3px solid var(--dorado);
 }
 
 .marca {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
   font-weight: 800;
   letter-spacing: 0.1em;
   color: var(--dorado);
@@ -69,7 +69,7 @@ body {
   width: 100%;
   max-width: 70rem;
   margin: 0 auto;
-  padding: 3rem 2.5rem;
+  padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 2.5rem);
 }
 
 /* ===== Portada ===== */
@@ -86,7 +86,7 @@ body {
 }
 
 .portada h1 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: 800;
   line-height: 1.2;
   margin: 0.5rem 0 1.5rem;
@@ -112,7 +112,7 @@ body {
 
 /* ===== Títulos de sección ===== */
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   text-align: center;
   color: var(--dorado);
@@ -183,7 +183,7 @@ h2 {
 }
 
 .encabezado-seccion h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 800;
   color: var(--blanco);
   margin: 0.25rem 0 0.75rem;
@@ -193,13 +193,14 @@ h2 {
 .contenedor-tabla {
   border-radius: 12px;
   border: 1px solid var(--rojo);
-  overflow: hidden;
+  overflow-x: auto;
 }
 
 .tabla-menu {
   width: 100%;
   border-collapse: collapse;
   background-color: var(--vino-oscuro);
+  min-width: 36rem;
 }
 
 .tabla-menu caption {
@@ -240,7 +241,7 @@ h2 {
   gap: 1.25rem 1.5rem;
   max-width: 45rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
   background-color: var(--vino-oscuro);
   border: 1px solid var(--rojo);
   border-radius: 12px;
@@ -413,6 +414,11 @@ h2::after {
   opacity: 1;
 }
 
+.contenedor-tabla:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 3px;
+}
+
 /* ===== Footer ===== */
 .pie {
   text-align: center;
@@ -428,27 +434,53 @@ h2::after {
   text-decoration: none;
 }
 
-
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes desvanecer {
-  0% { opacity: 0; transform: translateY(-20px); }
-  10% { opacity: 1; transform: translateY(0); }
-  90% { opacity: 1; }
-  100% { opacity: 0.5; transform: translateY(-20px); }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateY(-20px);
+  }
 }
 
 .encabezado {
@@ -497,4 +529,37 @@ h2::after {
   color: var(--vino-oscuro);
   text-decoration: none;
   font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .tarjetas {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+
+  .formulario {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .encabezado {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .navegacion {
+    gap: 1.25rem;
+  }
+
+  .boton {
+    display: block;
+    text-align: center;
+  }
+
+  .aviso {
+    left: 1rem;
+    right: 1rem;
+  }
 }
