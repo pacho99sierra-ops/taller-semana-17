@@ -1,0 +1,135 @@
+/* ===== Variables: paleta de ARDOR ===== */
+:root {
+  --vino: #4a0b0b;
+  --vino-oscuro: #2a0505;
+  --rojo: #8b1a1a;
+  --dorado: #d4a72c;
+  --dorado-claro: #f0c75e;
+  --crema: #f5ede0;
+  --blanco: #ffffff;
+}
+
+/* ===== Reinicio ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--vino);
+  color: var(--crema);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  background-color: var(--vino-oscuro);
+  border-bottom: 3px solid var(--dorado);
+}
+
+.marca {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+.navegacion {
+  display: flex;
+  gap: 2rem;
+}
+
+.navegacion a {
+  color: var(--crema);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navegacion a.activo {
+  color: var(--dorado);
+}
+
+/* ===== Main ===== */
+.principal {
+  flex: 1;
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+/* ===== Portada ===== */
+.portada {
+  text-align: center;
+  padding: 3rem 0 4rem;
+}
+
+.portada-etiqueta {
+  color: var(--dorado);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.portada h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0.5rem 0 1.5rem;
+  color: var(--blanco);
+}
+
+.portada-texto {
+  max-width: 40rem;
+  margin: 0 auto 2rem;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--dorado);
+  color: var(--vino-oscuro);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+}
+
+/* ===== Títulos de sección ===== */
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--dorado);
+  margin-bottom: 2rem;
+}
+
+/* ===== Footer ===== */
+.pie {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--vino-oscuro);
+  border-top: 3px solid var(--dorado);
+  font-size: 0.9rem;
+}
+
+.pie a {
+  color: var(--dorado);
+  font-weight: 600;
+  text-decoration: none;
+}
