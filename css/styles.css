@@ -157,7 +157,8 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
-.tarjeta-precio {
+.tarjeta .tarjeta-precio {
+  margin-bottom: 0;
   margin-top: auto;
   font-size: 1.5rem;
   font-weight: 800;
@@ -192,6 +193,7 @@ h2 {
 .contenedor-tabla {
   border-radius: 12px;
   border: 1px solid var(--rojo);
+  overflow: hidden;
 }
 
 .tabla-menu {
@@ -229,6 +231,83 @@ h2 {
 .tabla-menu td:nth-child(2) {
   font-weight: 600;
   color: var(--blanco);
+}
+
+/* ===== Formulario ===== */
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--vino-oscuro);
+  border: 1px solid var(--rojo);
+  border-radius: 12px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+.campo label,
+.campo legend {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--dorado);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--vino-oscuro);
+  background-color: var(--crema);
+  border: 2px solid transparent;
+  border-radius: 6px;
+}
+
+.campo textarea {
+  resize: vertical;
+}
+
+fieldset.campo {
+  border: none;
+}
+
+.campo .opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 400;
+  color: var(--crema);
+  cursor: pointer;
+}
+
+.campo .opcion input {
+  width: auto;
+  accent-color: var(--dorado);
+}
+
+.formulario-acciones {
+  text-align: center;
+}
+
+.formulario .boton {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 /* ===== Footer ===== */

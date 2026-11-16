@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos | ARDOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <a href="../index.html" class="marca">🔥 ARDOR</a>
+      <nav class="navegacion">
+        <a href="../index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="pedidos.html" class="activo">Pedidos</a>
+      </nav>
+    </header>
+    <main class="principal">
+      <section class="encabezado-seccion">
+        <p class="portada-etiqueta">Directo del barril a tu mesa</p>
+        <h1>Haz tu pedido</h1>
+        <p>Llena el formulario y te confirmamos por WhatsApp.</p>
+      </section>
+
+      <form class="formulario" action="#confirmacion">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ej: Ana Gómez"
+            required
+            minlength="3"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="celular">Celular</label>
+          <input
+            type="tel"
+            id="celular"
+            name="celular"
+            placeholder="Ej: 3001234567"
+            required
+            pattern="3[0-9]{9}"
+            title="Celular colombiano de 10 dígitos que empiece por 3"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="producto">Producto</label>
+          <select id="producto" name="producto" required>
+            <option value="" selected disabled>Selecciona un producto</option>
+            <option value="tocino">Tocino ahumado · $35.000</option>
+            <option value="bondiola">Bondiola ahumada · $35.000</option>
+            <option value="costilla">Costilla de cerdo · $40.000</option>
+            <option value="hamburguesas">Hamburguesas x5 · $23.100</option>
+            <option value="dedos">Dedos de pollo x8 · $15.400</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="cantidad">Cantidad</label>
+          <input
+            type="number"
+            id="cantidad"
+            name="cantidad"
+            value="1"
+            required
+            min="1"
+            max="20"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="fecha">Fecha de entrega</label>
+          <input type="date" id="fecha" name="fecha" required />
+        </div>
+
+        <fieldset class="campo">
+          <legend>Tipo de entrega</legend>
+          <label class="opcion">
+            <input type="radio" name="entrega" value="domicilio" required />
+            Domicilio
+          </label>
+          <label class="opcion">
+            <input type="radio" name="entrega" value="recoger" /> Recoger en el
+            punto
+          </label>
+        </fieldset>
+
+        <div class="campo campo-completo">
+          <label for="direccion">Dirección (si es domicilio)</label>
+          <input
+            type="text"
+            id="direccion"
+            name="direccion"
+            placeholder="Ej: Calle 50 # 45-20, Rionegro"
+          />
+        </div>
+
+        <div class="campo campo-completo">
+          <label for="notas">Comentarios</label>
+          <textarea
+            id="notas"
+            name="notas"
+            rows="3"
+            placeholder="Ej: sin salsa, entregar después de las 5 p. m."
+          ></textarea>
+        </div>
+
+        <div class="campo-completo formulario-acciones">
+          <button type="submit" class="boton">Enviar pedido</button>
+        </div>
+      </form>
+    </main>
+    <footer class="pie">
+      <p>ARDOR · Ahumados al barril · Oriente antioqueño</p>
+      <a
+        href="https://www.instagram.com/ardor_al_barril"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram @ardor_al_barril
+      </a>
+    </footer>
+  </body>
+</html>
