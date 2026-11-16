@@ -310,6 +310,33 @@ fieldset.campo {
   font-size: 1rem;
 }
 
+.navegacion a,
+.boton,
+.tarjeta {
+  transition: all 0.25s ease;
+}
+
+.navegacion a:hover {
+  color: var(--dorado-claro);
+}
+
+.boton:hover {
+  background-color: var(--dorado-claro);
+}
+
+.boton-secundario:hover {
+  background-color: var(--dorado);
+  color: var(--vino-oscuro);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: var(--dorado);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+
 /* ===== Footer ===== */
 .pie {
   text-align: center;
