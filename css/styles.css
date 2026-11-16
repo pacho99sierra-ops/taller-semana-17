@@ -209,6 +209,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--dorado);
+  text-align: left;
 }
 
 .tabla-menu th,
@@ -561,5 +562,9 @@ h2::after {
   .aviso {
     left: 1rem;
     right: 1rem;
+  }
+
+  .formulario .boton {
+    width: 100%;
   }
 }
