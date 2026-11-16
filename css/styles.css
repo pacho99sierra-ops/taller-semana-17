@@ -175,6 +175,62 @@ h2 {
   border: 2px solid var(--dorado);
 }
 
+/* ===== Encabezado de sección (páginas internas) ===== */
+.encabezado-seccion {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.encabezado-seccion h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--blanco);
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* ===== Tabla ===== */
+.contenedor-tabla {
+  border-radius: 12px;
+  border: 1px solid var(--rojo);
+}
+
+.tabla-menu {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--vino-oscuro);
+}
+
+.tabla-menu caption {
+  padding: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dorado);
+}
+
+.tabla-menu th,
+.tabla-menu td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.tabla-menu th {
+  background-color: var(--rojo);
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.tabla-menu td {
+  border-top: 1px solid var(--rojo);
+}
+
+.tabla-menu td:nth-child(2) {
+  font-weight: 600;
+  color: var(--blanco);
+}
+
 /* ===== Footer ===== */
 .pie {
   text-align: center;
