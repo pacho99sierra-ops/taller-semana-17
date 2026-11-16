@@ -335,7 +335,47 @@ fieldset.campo {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
+.tabla-menu tbody tr:nth-child(odd) td {
+  background-color: rgba(139, 26, 26, 0.25);
+}
 
+.tabla-menu tbody tr:hover td {
+  background-color: var(--rojo);
+}
+
+.tabla-menu th:last-child,
+.tabla-menu td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tabla-menu td:last-child {
+  font-weight: 800;
+  color: var(--dorado);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 167, 44, 0.5);
+}
+
+.campo input:valid:not(:placeholder-shown),
+.campo select:valid,
+.campo textarea:valid:not(:placeholder-shown) {
+  border-color: #2e9e5b;
+}
+
+.campo input:user-invalid,
+.campo select:user-invalid {
+  border-color: #e74c3c;
+  background-color: #fdecea;
+}
+
+.formulario:invalid .boton {
+  opacity: 0.6;
+}
 
 /* ===== Footer ===== */
 .pie {
